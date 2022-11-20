@@ -1,4 +1,3 @@
-
 # C:\Users\Korisnik\Documents\Java-learning\zadatak1.sql
 
 drop database if exists drzava;
