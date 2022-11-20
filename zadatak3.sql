@@ -8,7 +8,7 @@ create table zaposlenik (
     sifra int not null primary key auto_increment,
     ime varchar(20),
     prezime varchar(20),
-    placa decimal,
+    placa decimal (18,2),
     nadredeni int
 );
 
