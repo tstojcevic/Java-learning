@@ -8,14 +8,14 @@ create table obuca (
     sifra int not null primary key auto_increment,
     materijal varchar (20),
     ostecenje varchar (50),
-    velicina decimal (18,2)
+    velicina decimal (18,2),
+    korisnik int
 );
 
 create table popravak (
     sifra int not null primary key auto_increment,
     cijena decimal (18,2),
     vrijeme_popravka datetime,
-    korisnik int,
     segrt int
 );
 
@@ -31,7 +31,7 @@ create table obuca_popravak (
     popravak int
 );
 
-alter table popravak add foreign key (korisnik) references popravak (sifra);
+alter table obuca add foreign key (korisnik) references obuca (sifra);
 alter table popravak add foreign key (segrt) references segrt (sifra);
 alter table obuca_popravak add foreign key (obuca) references obuca (sifra);
 alter table obuca_popravak add foreign key (popravak) references popravak (sifra);
